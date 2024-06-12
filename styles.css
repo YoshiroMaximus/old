@@ -16,6 +16,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
+    margin-bottom: 20px; /* Add margin at the bottom of h1 */
 }
 
 nav ul {
@@ -109,4 +110,8 @@ a:hover {
     100% {
         background-position: 400%;
     }
+}
+
+nav {
+    margin-bottom: 20px; /* Add margin at the bottom of nav */
 }
