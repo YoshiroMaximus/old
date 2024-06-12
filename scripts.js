@@ -1,6 +1,6 @@
 // Initialize Sentry
 Sentry.init({
-  dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@o4507417449857024.ingest.us.sentry.io/4507417455034368', // Replace with your actual Sentry DSN if different
+  dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456', // Replace with your actual Sentry DSN if different
 });
 
 // Custom cursor script
