@@ -47,6 +47,7 @@ section {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
@@ -93,37 +94,24 @@ a:hover {
     margin-bottom: 1em;
 }
 
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-/* Define the custom cursor */
 .custom-cursor {
-    position: fixed;
-    width: 24px; /* Adjust the size of the cursor */
-    height: 24px; /* Adjust the size of the cursor */
-    background-color: transparent; /* Make the cursor transparent */
-    pointer-events: none; /* Ensure the cursor does not interfere with mouse events */
-    z-index: 9999; /* Ensure the cursor appears on top of other elements */
-    mix-blend-mode: difference; /* Blend mode for better visibility */
-    transition: transform 0.2s ease; /* Add a transition effect */
-}
-
-/* Define the cursor image */
-.custom-cursor::before {
-    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('assets/cursor.svg') no-repeat center center;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('openhand.svg'); /* Replace 'cursor.png' with your custom cursor image */
-    background-size: cover;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    z-index: 1000;
 }
 
-/* Hide the default cursor */
-body {
-    cursor: none;
+.custom-cursor.hover {
+    background-color: #1a1a1a; /* This can be adjusted or removed based on your hover design */
+}
+
+.custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.75);
 }
