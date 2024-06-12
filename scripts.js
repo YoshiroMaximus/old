@@ -1,8 +1,14 @@
+// Initialize Sentry
+Sentry.init({
+  dsn: 'https://js.sentry-cdn.com/0511d1eb23a5b7d982a0ad221c754fa7.min.js', // Replace with your actual Sentry DSN if different
+});
+
+// Custom cursor script
 document.addEventListener('DOMContentLoaded', function () {
     const cursor = document.querySelector('.custom-cursor');
-
+    
     if (!cursor) {
-        console.error("Custom cursor element not found in the DOM.");
+        console.error('Custom cursor element not found in the DOM.');
         return;
     }
 
@@ -17,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Add hover effect to clickable elements
-    const clickableElements = document.querySelectorAll('a, button');
+    const clickableElements = document.querySelectorAll('.clickable');
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', function () {
             cursor.classList.add('hover');
