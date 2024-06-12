@@ -13,110 +13,85 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Common CSS styles for both mobile and desktop */
-        body {
-            font-family: 'Lora', serif;
+        /* CSS styles for header */
+        header {
+            background-color: #0B1215;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px; /* Adjust logo size */
+            height: 150px; /* Adjust logo size */
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+
+        /* CSS styles for navigation */
+        nav ul {
+            list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            display: flex;
+            gap: 20px;
         }
 
-        /* Mobile-specific CSS */
-        @media only screen and (max-width: 414px) {
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
-
-            .rainbow-text {
-                font-size: 1.8em;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .social-icons {
-                margin-top: 10px;
-                text-align: center;
-            }
-
-            .social-icons a {
-                display: inline-block;
-                margin: 0 5px;
-            }
-
-            .social-icons img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .marquee {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            #about {
-                padding: 10px;
-            }
+        nav ul li {
+            font-size: 18px;
         }
 
-        /* Desktop-specific CSS */
-        @media only screen and (min-width: 415px) {
-            .logo {
-                width: 150px;
-                height: 150px;
-            }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+        }
 
-            .rainbow-text {
-                font-size: 3em; /* Adjust as needed */
-            }
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
 
-            nav ul {
-                list-style-type: none;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                margin: 0;
-                padding: 0;
-            }
-
-            nav ul li {
-                margin-left: 20px;
-            }
-
-            .social-icons {
-                display: flex;
-                gap: 10px;
-            }
-
-            .social-icons a {
-                text-decoration: none;
-                color: #fff;
-            }
-
-            .social-icons a:hover {
-                opacity: 0.8;
-            }
-
-            .marquee {
-                font-size: 18px; /* Adjust as needed */
-                padding: 20px;
-            }
-
-            #about {
-                padding: 20px;
-            }
+        /* CSS styles for rainbow text */
+        .rainbow-text {
+            background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 2em; /* Adjust font size */
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <!-- Logo -->
-        <div>
-            <img src="assets/logotop.png" alt="Logo" class="logo">
-        </div>
+        <!-- Rainbow text -->
+        <h1 class="rainbow-text">🎨 Yoshiro</h1>
+        
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="edit.html">How to Edit</a></li>
+                <li><a href="deploy.html">Deploying Changes</a></li>
+            </ul>
+        </nav>
         
         <!-- Social icons -->
         <div class="social-icons">
@@ -134,8 +109,6 @@
 
     <!-- Main content section -->
     <section id="about">
-        <h1 class="rainbow-text">🎨 Yoshiro</h1>
-
         <h2>🌟 Welcome to My Portfolio</h2>
         <p>Welcome to my personal portfolio website! Here, you'll find a showcase of my work, a bit about my background, and how to get in touch with me. I believe in the power of art and design to transform the world. Explore the links above to learn more about my projects and the principles that guide my creative process.</p>
         
@@ -185,13 +158,6 @@
     <!-- Marquee at the bottom -->
     <marquee class="css2" direction="right">You have reached the bottom 🫠</marquee>
 
-    <script>
-        // JavaScript to detect mobile device and redirect if necessary
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-            window.location.href = "mobile.html"; // Replace with your mobile version page
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
