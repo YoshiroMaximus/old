@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    cursor: none; /* Hide the default cursor */
 }
 
 header {
@@ -93,23 +92,4 @@ a:hover {
 
 .project {
     margin-bottom: 1em;
-}
-
-.custom-cursor {
-    position: absolute;
-    width: 40px; /* Increased size */
-    height: 40px; /* Increased size */
-    background: url('assets/cursor.svg') no-repeat center center;
-    background-size: contain;
-    pointer-events: none;
-    z-index: 1000;
-    transition: transform 0.1s ease; /* Faster transition */
-}
-
-.custom-cursor.hover {
-    transform: scale(1.5);
-}
-
-.custom-cursor.click {
-    transform: scale(0.75);
 }
