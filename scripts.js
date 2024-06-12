@@ -1,20 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
+//document.addEventListener('DOMContentLoaded', function () {
     // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1); // Remove the "#" from the href
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            } else {
-                console.error(`Element with ID '${targetId}' not found.`);
-            }
-        });
-    });
+  //  const navLinks = document.querySelectorAll('nav ul li a');
+    //navLinks.forEach(link => {
+      //  link.addEventListener('click', function (e) {
+        //    e.preventDefault();
+          //  const targetId = this.getAttribute('href').substring(1); // Remove the "#" from the href
+          //  const targetElement = document.getElementById(targetId);
+          //  if (targetElement) {
+          //      targetElement.scrollIntoView({
+          //          behavior: 'smooth'
+          //      });
+          //  } else {
+          //      console.error(`Element with ID '${targetId}' not found.`);
+         //   }
+     //   });
+  //  });
 
     // Scroll reveal animation for sections
     const sections = document.querySelectorAll('section');
