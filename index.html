@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <style>
-        /* Add styles for the dark mode */
-        body.dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -26,8 +19,6 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="edit.html">How to Edit</a></li>
                 <li><a href="deploy.html">Deploying Changes</a></li>
-                <!-- Add dark mode toggle button -->
-                <li><button id="dark-mode-toggle" aria-label="Change to dark theme">Change to Dark Mode</button></li>
             </ul>
         </nav>
     </header>
@@ -48,33 +39,5 @@
         <p>These principles not only guide my work but also help me create designs that are not only aesthetically pleasing but also functional and user-friendly. Thank you for visiting, and I hope you enjoy exploring my portfolio! 😊</p>
     </section>
     <script src="scripts.js"></script>
-
-    <script>
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            // Toggle dark mode class on body
-            document.body.classList.toggle('dark-mode');
-            // Save dark mode preference in a cookie
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            document.cookie = `darkMode=${isDarkMode ? 'enabled' : 'disabled'}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-        }
-
-        // Dark mode toggle button
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', toggleDarkMode);
-
-        // Check if dark mode preference is stored in cookie and apply it
-        window.addEventListener('DOMContentLoaded', () => {
-            const darkModeCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('darkMode='));
-            if (darkModeCookie) {
-                const isDarkMode = darkModeCookie.split('=')[1] === 'enabled';
-                if (isDarkMode) {
-                    document.body.classList.add('dark-mode');
-                    darkModeToggle.innerText = 'Change to Light Mode';
-                    darkModeToggle.setAttribute('aria-label', 'Change to light theme');
-                }
-            }
-        });
-    </script>
 </body>
 </html>
