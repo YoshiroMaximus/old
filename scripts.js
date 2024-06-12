@@ -1,11 +1,7 @@
 // Initialize Sentry
-if (typeof Sentry !== 'undefined') {
-    Sentry.init({
-        dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456' // Replace with your actual Sentry DSN if different
-    });
-} else {
-    console.error('Sentry script not loaded.');
-}
+Sentry.init({
+  dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456', // Replace with your actual Sentry DSN if different
+});
 
 // Custom cursor script
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,16 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    // Add event listeners to track mouse movements
+    document.addEventListener('mousemove', function (e) {
+        moveCursor(e);
+    });
+
     // Function to move the custom cursor
     function moveCursor(e) {
-        cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`; // Center the cursor
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     }
 
-    // Add event listeners to track mouse movements
-    document.addEventListener('mousemove', moveCursor);
-
     // Add hover effect to clickable elements
-    const clickableElements = document.querySelectorAll('a, button, input, .clickable');
+    const clickableElements = document.querySelectorAll('.clickable');
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', function () {
             cursor.classList.add('hover');
