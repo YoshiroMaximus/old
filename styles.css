@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    cursor: none; /* Hide the default cursor */
 }
 
 header {
@@ -95,17 +96,16 @@ a:hover {
 }
 
 .custom-cursor {
-    width: 20px;
-    height: 20px;
-    background: url('cursor.svg') no-repeat center center;
-    background-size: contain;
-    border: none;
-    border-radius: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: url('assets/cursor.svg') no-repeat center center;
+    background-size: cover;
     pointer-events: none;
-    transition: transform 0.1s ease-in-out;
     z-index: 1000;
+    transition: transform 0.1s ease-out;
 }
 
 .custom-cursor.hover {
@@ -115,3 +115,5 @@ a:hover {
 .custom-cursor.click {
     transform: translate(-50%, -50%) scale(0.75);
 }
+
+/* Other styles */
