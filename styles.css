@@ -97,23 +97,19 @@ a:hover {
 
 .custom-cursor {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
+    width: 40px; /* Increased size */
+    height: 40px; /* Increased size */
     background: url('assets/cursor.svg') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     pointer-events: none;
     z-index: 1000;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.1s ease; /* Faster transition */
 }
 
 .custom-cursor.hover {
-    background-color: #1a1a1a; /* This can be adjusted or removed based on your hover design */
+    transform: scale(1.5);
 }
 
 .custom-cursor.click {
-    transform: translate(-50%, -50%) scale(0.75);
+    transform: scale(0.75);
 }
-
-/* Other styles */
