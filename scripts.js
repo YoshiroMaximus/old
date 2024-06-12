@@ -16,18 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    // Add event listeners to track mouse movements
-    document.addEventListener('mousemove', function (e) {
-        moveCursor(e);
-    });
-
     // Function to move the custom cursor
     function moveCursor(e) {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`; // Center the cursor
     }
 
+    // Add event listeners to track mouse movements
+    document.addEventListener('mousemove', moveCursor);
+
     // Add hover effect to clickable elements
-    const clickableElements = document.querySelectorAll('.clickable');
+    const clickableElements = document.querySelectorAll('a, button, input, .clickable');
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', function () {
             cursor.classList.add('hover');
