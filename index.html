@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
                 <li><a href="edit.html">How to Edit</a></li>
                 <li><a href="deploy.html">Deploying Changes</a></li>
                 <!-- Add dark mode toggle button -->
-                <li><button id="dark-mode-toggle">Dark Mode</button></li>
+                <li><button id="dark-mode-toggle" aria-label="Change to dark theme">Change to Dark Mode</button></li>
             </ul>
         </nav>
     </header>
@@ -70,6 +70,8 @@
                 const isDarkMode = darkModeCookie.split('=')[1] === 'enabled';
                 if (isDarkMode) {
                     document.body.classList.add('dark-mode');
+                    darkModeToggle.innerText = 'Change to Light Mode';
+                    darkModeToggle.setAttribute('aria-label', 'Change to light theme');
                 }
             }
         });
