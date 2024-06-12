@@ -8,8 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://yoshiromaximus.github.io/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.sentry-cdn.com;">
-    <script src="https://js.sentry-cdn.com/0511d1eb23a5b7d982a0ad221c754fa7.min.js" crossorigin="anonymous"></script>
+    <style>
+        .custom-cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('assets/cursor.svg') no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 1000;
+            transition: transform 0.15s ease;
+        }
+        .custom-cursor.hover {
+            transform: scale(1.5);
+        }
+        .custom-cursor.click {
+            transform: scale(0.75);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,6 +56,11 @@
         
         <p>These principles not only guide my work but also help me create designs that are not only aesthetically pleasing but also functional and user-friendly. Thank you for visiting, and I hope you enjoy exploring my portfolio! 😊</p>
     </section>
-    <script src="scripts.js"></script> 
+    <div class="custom-cursor"></div>
+    <script src="scripts.js"></script>
+    <script
+        src="https://js.sentry-cdn.com/0511d1eb23a5b7d982a0ad221c754fa7.min.js"
+        crossorigin="anonymous"
+    ></script>
 </body>
 </html>
