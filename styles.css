@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    position: relative; /* Ensure body is positioned relatively for absolute positioning of stars */
 }
 
 /* Header styles */
@@ -53,6 +54,7 @@ section {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Ensure section is positioned relatively for absolute positioning of stars */
 }
 
 section:hover {
@@ -111,130 +113,40 @@ a:hover {
 
 @keyframes rainbow {
     0% {
-        background-position: 0%;
+        background-position: 0 0;
     }
     100% {
         background-position: 400%;
     }
 }
 
-/* Dark mode toggle button */
-.dark-mode-toggle {
+/* Star images positioning and rotation */
+.star-container {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent stars from interfering with mouse events */
 }
 
-.dark-mode-toggle label {
-    width: 60px; /* Adjust button width as needed */
-    height: 30px; /* Adjust button height as needed */
-    position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 30px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.dark-mode-toggle label:after {
-    content: "";
-    width: 20px; /* Adjust knob width as needed */
-    height: 20px; /* Adjust knob height as needed */
+.star {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    width: 20px; /* Adjust size of the star image */
+    height: 20px;
 }
 
-.dark-mode-toggle input {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
 
-.dark-mode-toggle input:checked + label {
-    background: #242424;
-}
+    h3 {
+        font-size: 1.2em;
+    }
 
-.dark-mode-toggle input:checked + label:after {
-    left: 30px; /* Adjust knob position for checked state */
-    transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-}
-
-.dark-mode-toggle label:active:after {
-    width: 40px; /* Adjust active state width as needed */
-}
-
-.dark-mode-toggle .background {
-    width: 100%; /* Adjust background width as needed */
-    height: 100%; /* Adjust background height as needed */
-    background: #fff;
-    z-index: -1;
-    position: absolute;
-    transition: 0.3s;
-}
-
-.dark-mode-toggle input:checked + label + .background {
-    background: #242424;
-}
-
-.dark-mode-toggle label svg {
-    position: absolute;
-    width: 16px; /* Adjust icon size as needed */
-    top: 7px; /* Adjust icon position as needed */
-    z-index: 100;
-    transition: 0.3s;
-}
-
-.dark-mode-toggle label svg.sun {
-    left: 7px; /* Adjust sun icon position as needed */
-    fill: #fff;
-}
-
-.dark-mode-toggle label svg.moon {
-    left: 37px; /* Adjust moon icon position as needed */
-    fill: #7e7e7e;
-}
-
-.dark-mode-toggle input:checked + label svg.sun {
-    fill: #7e7e7e;
-}
-
-.dark-mode-toggle input:checked + label svg.moon {
-    fill: #fff;
-}
-
-/* Custom CSS for marquees */
-.css1 {
-    color: red;
-    background-color: yellow;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-}
-
-.css2 {
-    color: blue;
-    background-color: lightpink;
-    font-size: 30px;
-    font-family: 'Leelawadee UI Semilight';
-    font-style: italic;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
-.css3 {
-    color: green;
-    background-color: lightyellow;
-    font-size: 20px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    p {
+        font-size: 1em;
+    }
 }
