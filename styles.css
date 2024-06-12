@@ -97,7 +97,7 @@ a:hover {
 .custom-cursor {
     width: 20px;
     height: 20px;
-    background: url('assets/cursor.svg') no-repeat center center;
+    background: url('cursor.svg') no-repeat center center;
     background-size: contain;
     border: none;
     border-radius: 50%;
