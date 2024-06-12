@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cursor = document.querySelector('.custom-cursor');
 
+    // Check if cursor element is found
+    if (!cursor) {
+        console.error("Custom cursor element not found in the DOM.");
+        return;
+    }
+
     // Add event listeners to track mouse movements
     document.addEventListener('mousemove', function (e) {
         moveCursor(e);
