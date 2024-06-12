@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Check if the cursor element is found
     const cursor = document.querySelector('.custom-cursor');
-
-    // Check if cursor element is found
     if (!cursor) {
         console.error("Custom cursor element not found in the DOM.");
         return;
