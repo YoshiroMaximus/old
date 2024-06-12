@@ -1,8 +1,3 @@
-// Initialize Sentry
-Sentry.init({
-  dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456', // Replace with your actual Sentry DSN if different
-});
-
 // Custom cursor script
 document.addEventListener('DOMContentLoaded', function () {
     const cursor = document.querySelector('.custom-cursor');
