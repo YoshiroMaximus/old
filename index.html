@@ -4,105 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        /* Critical CSS styles */
-        body {
-            font-family: 'Lora', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1em;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            color: #f4f4f4;
-        }
-        section {
-            padding: 2em;
-            margin: 2em auto;
-            max-width: 800px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            font-size: 1.8em;
-            color: #1a1a1a;
-            margin-top: 0;
-        }
-        h3 {
-            font-size: 1.4em;
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 1.5em;
-            font-size: 1.1em;
-        }
-        ul {
-            padding-left: 1.2em;
-        }
-        ul li {
-            margin-bottom: 0.5em;
-            font-size: 1.1em;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .project {
-            margin-bottom: 1em;
-        }
-        .hidden {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>🎨 Yoshiro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="edit.html">How to Edit</a></li>
-                <li><a href="deploy.html">Deploying Changes</a></li>
-            </ul>
-        </nav>
+    <h1 class="rainbow-text">🎨 Yoshiro</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="edit.html">How to Edit</a></li>
+            <li><a href="deploy.html">Deploying Changes</a></li>
+        </ul>
+    </nav>
     </header>
     <section id="about">
         <h2>🌟 Welcome to My Portfolio</h2>
@@ -120,11 +38,6 @@
         
         <p>These principles not only guide my work but also help me create designs that are not only aesthetically pleasing but also functional and user-friendly. Thank you for visiting, and I hope you enjoy exploring my portfolio! 😊</p>
     </section>
-    <script>
-        // Defer non-critical JavaScript
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your JavaScript code here
-        });
-    </script>
+    <script src="scripts.js"></script> 
 </body>
 </html>
