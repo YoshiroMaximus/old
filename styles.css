@@ -120,22 +120,6 @@ a:hover {
     }
 }
 
-/* Star images positioning and rotation */
-.star-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Prevent stars from interfering with mouse events */
-}
-
-.star {
-    position: absolute;
-    width: 20px; /* Adjust size of the star image */
-    height: 20px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h2 {
