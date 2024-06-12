@@ -61,49 +61,81 @@
             }
         }
 
-        /* Desktop-specific CSS (already defined in styles.css) */
-        /* No need to repeat here, as it remains the same */
+        /* Desktop-specific CSS */
+        @media only screen and (min-width: 415px) {
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
 
+            .rainbow-text {
+                font-size: 3em; /* Adjust as needed */
+            }
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 10px;
+            }
+
+            .social-icons a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .social-icons a:hover {
+                opacity: 0.8;
+            }
+
+            .marquee {
+                font-size: 18px; /* Adjust as needed */
+                padding: 20px;
+            }
+
+            #about {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <!-- Rainbow text -->
-        <h1 class="rainbow-text">🎨 Yoshiro</h1>
-        
-        <!-- Logo (visible on desktop only) -->
-        <div class="logo-container">
+        <!-- Logo -->
+        <div>
             <img src="assets/logotop.png" alt="Logo" class="logo">
         </div>
-        
-        <!-- Navigation (visible on desktop only) -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="edit.html">How to Edit</a></li>
-                <li><a href="deploy.html">Deploying Changes</a></li>
-            </ul>
-        </nav>
         
         <!-- Social icons -->
         <div class="social-icons">
             <a href="https://github.com/yoshiromaximus" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="75" height="75">
             </a>
             <a href="https://discord.gg/uCA94eKGWs" target="_blank">
-                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord">
+                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord" width="75" height="75">
             </a>
         </div>
     </header>
 
     <!-- Marquee at the top -->
-    <marquee class="marquee"> It seems you have stumbled upon my website! 🌐</marquee>
+    <marquee class="css1"> It seems you have stumbled upon my website! 🌐</marquee>
 
     <!-- Main content section -->
     <section id="about">
+        <h1 class="rainbow-text">🎨 Yoshiro</h1>
+
         <h2>🌟 Welcome to My Portfolio</h2>
         <p>Welcome to my personal portfolio website! Here, you'll find a showcase of my work, a bit about my background, and how to get in touch with me. I believe in the power of art and design to transform the world. Explore the links above to learn more about my projects and the principles that guide my creative process.</p>
         
@@ -151,13 +183,14 @@
     </section>
     
     <!-- Marquee at the bottom -->
-    <marquee class="marquee" direction="right">You have reached the bottom 🫠</marquee>
+    <marquee class="css2" direction="right">You have reached the bottom 🫠</marquee>
 
-    <script src="scripts.js"></script>
     <script>
-        // JavaScript to detect mobile device and redirect to mobile version
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            window.location.href = "mobile.html";
+        // JavaScript to detect mobile device and redirect if necessary
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            window.location.href = "mobile.html"; // Replace with your mobile version page
         }
     </script>
 </body>
