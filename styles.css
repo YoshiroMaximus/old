@@ -93,3 +93,20 @@ a:hover {
 .project {
     margin-bottom: 1em;
 }
+.rainbow-text {
+    background: linear-gradient(45deg, #f00, #ff0, #0f0, #00f, #f0f, #f00);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow 10s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
