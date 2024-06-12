@@ -1,41 +1,34 @@
-//document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scrolling for navigation links
-  //  const navLinks = document.querySelectorAll('nav ul li a');
-    //navLinks.forEach(link => {
-      //  link.addEventListener('click', function (e) {
-        //    e.preventDefault();
-          //  const targetId = this.getAttribute('href').substring(1); // Remove the "#" from the href
-          //  const targetElement = document.getElementById(targetId);
-          //  if (targetElement) {
-          //      targetElement.scrollIntoView({
-          //          behavior: 'smooth'
-          //      });
-          //  } else {
-          //      console.error(`Element with ID '${targetId}' not found.`);
-         //   }
-     //   });
-  //  });
+document.addEventListener('DOMContentLoaded', function () {
+    const cursor = document.querySelector('.custom-cursor');
 
-    // Scroll reveal animation for sections
-  //  const sections = document.querySelectorAll('section');
- //   const options = {
-  //      threshold: 0.1
- //   };
+    // Add event listeners to track mouse movements
+    document.addEventListener('mousemove', function (e) {
+        moveCursor(e);
+    });
 
-  //  const observer = new IntersectionObserver(function (entries, observer) {
-  //      entries.forEach(entry => {
-  //          if (!entry.isIntersecting) return;
-   //         entry.target.classList.add('reveal');
-   //         observer.unobserve(entry.target);
-    //    });
-  //  }, options);
-//
-//    sections.forEach(section => {
- //       observer.observe(section);
- //   });
+    // Function to move the custom cursor
+    function moveCursor(e) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    }
 
-    // Add reveal class to sections when in view
- //   sections.forEach(section => {
- //       section.classList.add('hidden');
-//    });
-//});
+    // Add hover effect to clickable elements
+    const clickableElements = document.querySelectorAll('.clickable');
+    clickableElements.forEach(element => {
+        element.addEventListener('mouseenter', function () {
+            cursor.classList.add('hover');
+        });
+        element.addEventListener('mouseleave', function () {
+            cursor.classList.remove('hover');
+        });
+    });
+
+    // Add click effect to clickable elements
+    clickableElements.forEach(element => {
+        element.addEventListener('mousedown', function () {
+            cursor.classList.add('click');
+        });
+        element.addEventListener('mouseup', function () {
+            cursor.classList.remove('click');
+        });
+    });
+});
