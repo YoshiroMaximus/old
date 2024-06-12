@@ -1,40 +1,30 @@
-// Custom cursor script
 document.addEventListener('DOMContentLoaded', function () {
-    const cursor = document.querySelector('.custom-cursor');
-    
-    if (!cursor) {
-        console.error('Custom cursor element not found in the DOM.');
-        return;
-    }
-
-    // Add event listeners to track mouse movements
-    document.addEventListener('mousemove', function (e) {
-        moveCursor(e);
-    });
-
-    // Function to move the custom cursor
-    function moveCursor(e) {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    }
+    const clickableElements = document.querySelectorAll('.clickable');
 
     // Add hover effect to clickable elements
-    const clickableElements = document.querySelectorAll('.clickable');
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', function () {
-            cursor.classList.add('hover');
+            element.classList.add('hover');
         });
         element.addEventListener('mouseleave', function () {
-            cursor.classList.remove('hover');
+            element.classList.remove('hover');
         });
     });
 
     // Add click effect to clickable elements
     clickableElements.forEach(element => {
         element.addEventListener('mousedown', function () {
-            cursor.classList.add('click');
+            element.classList.add('click');
         });
         element.addEventListener('mouseup', function () {
-            cursor.classList.remove('click');
+            element.classList.remove('click');
         });
     });
+
+    // Performance optimization suggestions:
+    // 1. Cache DOM queries to minimize re-querying.
+    // 2. Minimize classList manipulations for better performance.
+    // 3. Consolidate event listeners where possible to reduce overhead.
+
+    // Optional: Add further optimizations based on specific performance profiling.
 });
