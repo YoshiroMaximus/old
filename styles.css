@@ -1,12 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: #fff;
     padding: 1em 0;
     text-align: center;
@@ -14,11 +15,13 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 2em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -29,15 +32,62 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
 }
 
 section {
     padding: 2em;
-    margin: 1em auto;
+    margin: 2em auto;
     max-width: 800px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #1a1a1a;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .project {
