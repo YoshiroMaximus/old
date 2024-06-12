@@ -202,13 +202,3 @@ a:hover {
 
 .dark-mode-toggle label svg.moon {
     left: 37px; /* Adjust moon icon position as needed */
-    fill: #7e7e7e;
-}
-
-.dark-mode-toggle input:checked + label svg.sun {
-    fill: #7e7e7e;
-}
-
-.dark-mode-toggle input:checked + label svg.moon {
-    fill: #fff;
-}
