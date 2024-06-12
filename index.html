@@ -10,20 +10,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS styles for header */
+        header {
+            background-color: #0B1215;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px; /* Adjust logo size */
+            height: 150px; /* Adjust logo size */
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <h1 class="rainbow-text">🎨 Yoshiro</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="edit.html">How to Edit</a></li>
-                <li><a href="deploy.html">Deploying Changes</a></li>
-            </ul>
-        </nav>
+        <!-- Logo -->
+        <div>
+            <img src="assets/logotop.png" alt="Logo" class="logo">
+        </div>
+        
+        <!-- Social icons -->
+        <div class="social-icons">
+            <a href="https://github.com/yoshiromaximus" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="75" height="75">
+            </a>
+            <a href="https://discord.gg/uCA94eKGWs" target="_blank">
+                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord" width="75" height="75">
+            </a>
+        </div>
     </header>
 
     <!-- Marquee at the top -->
