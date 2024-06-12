@@ -1,6 +1,6 @@
 # 🌐 My Portfolio Website
 
-Welcome to my portfolio website! This site showcases my projects, skills, and contact information. It is hosted on GitHub Pages, and you can view it live [here](https://<YoshiroMaximus>.github.io).
+Welcome to my portfolio website! This site showcases my projects, skills, and contact information. It is hosted on GitHub Pages, and you can view it live [here](https://YoshiroMaximus.github.io).
 
 ## 📑 Table of Contents
 - [About](about.html)
