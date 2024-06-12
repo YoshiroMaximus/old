@@ -1,7 +1,11 @@
 // Initialize Sentry
-Sentry.init({
-  dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456', // Replace with your actual Sentry DSN if different
-});
+if (typeof Sentry !== 'undefined') {
+    Sentry.init({
+        dsn: 'https://0511d1eb23a5b7d982a0ad221c754fa7@sentry.io/123456' // Replace with your actual Sentry DSN if different
+    });
+} else {
+    console.error('Sentry script not loaded.');
+}
 
 // Custom cursor script
 document.addEventListener('DOMContentLoaded', function () {
