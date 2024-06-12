@@ -202,3 +202,46 @@ a:hover {
 
 .dark-mode-toggle label svg.moon {
     left: 37px; /* Adjust moon icon position as needed */
+    fill: #7e7e7e;
+}
+
+.dark-mode-toggle input:checked + label svg.sun {
+    fill: #7e7e7e;
+}
+
+.dark-mode-toggle input:checked + label svg.moon {
+    fill: #fff;
+}
+
+/* Custom CSS for marquees */
+.css1 {
+    color: red;
+    background-color: yellow;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.css2 {
+    color: blue;
+    background-color: lightpink;
+    font-size: 30px;
+    font-family: 'Leelawadee UI Semilight';
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.css3 {
+    color: green;
+    background-color: lightyellow;
+    font-size: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.css4 {
+    color: purple;
+    background-color: lightblue;
+    font-size: 18px;
+    font-family: 'Verdana', sans-serif;
+}
