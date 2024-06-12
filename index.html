@@ -41,6 +41,30 @@
         .social-icons a:hover {
             opacity: 0.8;
         }
+
+        /* CSS styles for navigation */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +74,17 @@
         <div>
             <img src="assets/logotop.png" alt="Logo" class="logo">
         </div>
+        
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="edit.html">How to Edit</a></li>
+                <li><a href="deploy.html">Deploying Changes</a></li>
+            </ul>
+        </nav>
         
         <!-- Social icons -->
         <div class="social-icons">
