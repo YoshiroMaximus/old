@@ -10,13 +10,13 @@ Welcome to my portfolio website! This site showcases my projects, skills, and co
 - [Deploying Changes](deploy.html)
 
 ## ✨ About
-Learn more about me on the [About Me](about.html) page. Edit this section to add information about yourself, your background, and your skills.
+Learn more about me on the [About Me](https://YoshiroMaximus.github.io/about.html) page. Edit this section to add information about yourself, your background, and your skills.
 
 ## 🚀 Projects
-Check out my recent work on the [Projects](projects.html) page. Each project includes a title, description, and relevant links.
+Check out my recent work on the [Projects](https://YoshiroMaximus.github.io/projects.html) page. Each project includes a title, description, and relevant links.
 
 ## 📧 Contact
-Feel free to reach out to me through the [Contact](contact.html) page. You can find my email address there, and I'd love to hear from you!
+Feel free to reach out to me through the [Contact](https://YoshiroMaximus.github.io/contact.html) page. You can find my email address there, and I'd love to hear from you!
 
 ## 🛠️ How to Edit
 To edit this portfolio:
@@ -33,7 +33,7 @@ To edit this portfolio:
 
 4. Add or modify animations in `scripts.js`.
 
-For more detailed instructions, visit the [How to Edit](edit.html) page.
+For more detailed instructions, visit the [How to Edit](https://YoshiroMaximus.github.io/edit.html) page.
 
 ## 🌍 Deploying Changes
 To deploy your changes:
@@ -48,7 +48,7 @@ To deploy your changes:
     ```
 3. Your updates will be live at `https://<username>.github.io` shortly after.
 
-For more details, visit the [Deploying Changes](deploy.html) page.
+For more details, visit the [Deploying Changes](https://YoshiroMaximus.github.io/deploy.html) page.
 
 ## 🤝 Contributing
 If you have suggestions or find any issues, feel free to open an issue or a pull request. Contributions are welcome!
