@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if the cursor element is found
     const cursor = document.querySelector('.custom-cursor');
+
     if (!cursor) {
         console.error("Custom cursor element not found in the DOM.");
         return;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Add hover effect to clickable elements
-    const clickableElements = document.querySelectorAll('.clickable');
+    const clickableElements = document.querySelectorAll('a, button');
     clickableElements.forEach(element => {
         element.addEventListener('mouseenter', function () {
             cursor.classList.add('hover');
