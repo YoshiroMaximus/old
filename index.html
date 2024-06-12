@@ -13,67 +13,57 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* CSS styles for header */
-        header {
-            background-color: #0B1215;
-            color: #fff;
-            padding: 1em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            width: 150px; /* Adjust logo size */
-            height: 150px; /* Adjust logo size */
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .social-icons a:hover {
-            opacity: 0.8;
-        }
-
-        /* CSS styles for navigation */
-        nav ul {
-            list-style-type: none;
+        /* Common CSS styles for both mobile and desktop */
+        body {
+            font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            gap: 20px;
+            background-color: #f0f0f0;
         }
 
-        nav ul li {
-            font-size: 18px;
+        /* Mobile-specific CSS */
+        @media only screen and (max-width: 414px) {
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .rainbow-text {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .social-icons {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .social-icons a {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .social-icons img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .marquee {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            #about {
+                padding: 10px;
+            }
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            transition: opacity 0.3s ease;
-        }
+        /* Desktop-specific CSS (already defined in styles.css) */
+        /* No need to repeat here, as it remains the same */
 
-        nav ul li a:hover {
-            opacity: 0.8;
-        }
-
-        /* CSS styles for rainbow text */
-        .rainbow-text {
-            background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-            -webkit-background-clip: text;
-            color: transparent;
-            font-size: 2em; /* Adjust font size */
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -82,7 +72,12 @@
         <!-- Rainbow text -->
         <h1 class="rainbow-text">🎨 Yoshiro</h1>
         
-        <!-- Navigation -->
+        <!-- Logo (visible on desktop only) -->
+        <div class="logo-container">
+            <img src="assets/logotop.png" alt="Logo" class="logo">
+        </div>
+        
+        <!-- Navigation (visible on desktop only) -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -96,16 +91,16 @@
         <!-- Social icons -->
         <div class="social-icons">
             <a href="https://github.com/yoshiromaximus" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="75" height="75">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
             </a>
             <a href="https://discord.gg/uCA94eKGWs" target="_blank">
-                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord" width="75" height="75">
+                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord">
             </a>
         </div>
     </header>
 
     <!-- Marquee at the top -->
-    <marquee class="css1"> It seems you have stumbled upon my website! 🌐</marquee>
+    <marquee class="marquee"> It seems you have stumbled upon my website! 🌐</marquee>
 
     <!-- Main content section -->
     <section id="about">
@@ -156,8 +151,14 @@
     </section>
     
     <!-- Marquee at the bottom -->
-    <marquee class="css2" direction="right">You have reached the bottom 🫠</marquee>
+    <marquee class="marquee" direction="right">You have reached the bottom 🫠</marquee>
 
     <script src="scripts.js"></script>
+    <script>
+        // JavaScript to detect mobile device and redirect to mobile version
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            window.location.href = "mobile.html";
+        }
+    </script>
 </body>
 </html>
