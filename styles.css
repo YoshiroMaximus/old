@@ -1,11 +1,13 @@
+/* Reset and basic styling */
 body {
-    font-family: 'Lora', serif; /* Updated with your chosen font */
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Header styles */
 header {
     background-color: #1a1a1a;
     color: #fff;
@@ -14,11 +16,12 @@ header {
 }
 
 header h1 {
-    margin: 0;
     font-size: 2em;
+    margin: 0;
     margin-bottom: 20px; /* Add margin at the bottom of h1 */
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -41,6 +44,7 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
+/* Section styles */
 section {
     padding: 2em;
     margin: 2em auto;
@@ -94,11 +98,13 @@ a:hover {
 .project {
     margin-bottom: 1em;
 }
+
+/* Rainbow text effect */
 .rainbow-text {
     background: linear-gradient(45deg, #f00, #ff0, #0f0, #00f, #f0f, #f00);
     background-size: 400%;
     color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* For older Safari/Chrome */
     background-clip: text;
     animation: rainbow 10s linear infinite;
 }
@@ -112,11 +118,7 @@ a:hover {
     }
 }
 
-nav {
-    margin-bottom: 20px; /* Add margin at the bottom of nav */
-}
-
-/* New CSS for Dark Mode Toggle */
+/* Dark mode toggle button */
 .dark-mode-toggle {
     position: absolute;
     top: 20px;
@@ -210,4 +212,3 @@ nav {
 .dark-mode-toggle input:checked + label svg.moon {
     fill: #fff;
 }
-
