@@ -9,8 +9,14 @@ Welcome to my portfolio website! This site showcases my projects, skills, and co
 - [How to Edit](edit.html)
 - [Deploying Changes](deploy.html)
 
-## ✨ About
-Learn more about me on the [About Me](https://YoshiroMaximus.github.io/about.html) page. Edit this section to add information about yourself, your background, and your skills.
+## ✨ Upcoming ideas:
+- [Dark Mode Switch Animation](https://lottiefiles.com/animations/light-dark-mode-button-8aPqtXG9MA?from=search)
+- [Font Colors to Use Instead of Pure Black (#000000)](https://bootcamp.uxdesign.cc/font-colors-to-use-instead-of-pure-black-000000-a53944d4e3eb)
+- [Bootstrap Carousel Example](https://www.w3schools.com/bootstrap/bootstrap_carousel.asp)
+
+### Colors:
+- Text Color: #304c6b
+- Accent Color: #3b8beb
 
 ## 🚀 Projects
 Check out my recent work on the [Projects](https://YoshiroMaximus.github.io/projects.html) page. Each project includes a title, description, and relevant links.
