@@ -17,7 +17,6 @@ header {
 
 header h1 {
     font-size: 2em;
-    margin: 0;
     margin-bottom: 20px; /* Add margin at the bottom of h1 */
 }
 
@@ -93,10 +92,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.project {
-    margin-bottom: 1em;
 }
 
 /* Rainbow text effect */
