@@ -25,21 +25,18 @@
     <meta name="twitter:description" content="Showcasing web design and JavaScript projects by Yoshiro.">
     <meta name="twitter:image" content="assets/og-image.png">
     
-    <!-- Stylesheets and Fonts -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/webp" href="assets/icon.webp">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <!-- Performance Optimization -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="scripts.js" as="script">
-    <link rel="preload" href="assets/icon.png" as="image">
-
+    <!-- Critical CSS styles -->
     <style>
-        /* CSS styles for header */
+        /* Reset and basic styling */
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styles */
         header {
             background-color: #0B1215;
             color: #fff;
@@ -80,6 +77,19 @@
             font-weight: bold;
         }
     </style>
+    
+    <!-- Stylesheets and Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="assets/icon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Performance Optimization -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="scripts.js" as="script">
+    <link rel="preload" href="assets/icon.png" as="image">
 </head>
 <body>
     <!-- Header section -->
@@ -101,7 +111,7 @@
         <!-- Social icons -->
         <div class="social-icons">
             <a href="https://discord.gg/uCA94eKGWs" target="_blank">
-                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord" width="32" height="32">
+                <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord" width="75" height="75">
             </a>
         </div>
     </header>
