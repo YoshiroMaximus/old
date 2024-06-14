@@ -13,11 +13,14 @@ header {
     color: #fff;
     padding: 1em 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     font-size: 2em;
-    margin-bottom: 20px; /* Add margin at the bottom of h1 */
+    margin: 0; /* Reset margin */
 }
 
 /* Navigation styles */
@@ -25,10 +28,11 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1em;
 }
 
@@ -43,7 +47,41 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
-/* Section styles */
+/* Social icons styles */
+.social-icons {
+    margin-left: auto; /* Push icons to the right */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px; /* Adjust spacing between social icons */
+}
+
+.social-icons a img {
+    width: 32px; /* Adjust icon size */
+    height: 32px; /* Adjust icon size */
+}
+
+/* Rainbow text effect */
+.rainbow-text {
+    background: linear-gradient(45deg, #f00, #ff0, #0f0, #00f, #f0f, #f00);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text; /* For older Safari/Chrome */
+    background-clip: text;
+    animation: rainbow 10s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+/* Section styles (retain your existing section styles) */
 section {
     padding: 2em;
     margin: 2em auto;
@@ -94,26 +132,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Rainbow text effect */
-.rainbow-text {
-    background: linear-gradient(45deg, #f00, #ff0, #0f0, #00f, #f0f, #f00);
-    background-size: 400%;
-    color: transparent;
-    -webkit-background-clip: text; /* For older Safari/Chrome */
-    background-clip: text;
-    animation: rainbow 10s linear infinite;
-}
-
-@keyframes rainbow {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 400%;
-    }
-}
-
-/* Responsive adjustments */
+/* Responsive adjustments (retain your existing media queries) */
 @media (max-width: 768px) {
     h2 {
         font-size: 1.5em;
