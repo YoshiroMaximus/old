@@ -49,9 +49,36 @@
             z-index: 1000;
         }
 
+        header.sticky {
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         .logo {
             width: 150px; /* Adjust logo size */
             height: 150px; /* Adjust logo size */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
         }
 
         .social-icons {
@@ -152,32 +179,16 @@
         <ul>
             <li><strong>Blog Platform ✍️</strong>
                 <p>A blogging platform with user authentication, post creation, and commenting features.</p>
-                <p><strong>Technologies used:</strong> Django, Python, Bootstrap.</p>
+                <p><strong>Technologies used:</strong> Django, Python, PostgreSQL.</p>
             </li>
-            <li><strong>Data Visualization Dashboard 📊</strong>
-                <p>A dashboard for visualizing complex data sets with interactive charts and filters.</p>
-                <p><strong>Technologies used:</strong> D3.js, Angular, Node.js.</p>
-            </li>
-            <li><strong>Game Development 🎮</strong>
-                <p>A 2D platformer game with custom artwork, engaging levels, and challenging gameplay mechanics.</p>
-                <p><strong>Technologies used:</strong> Unity, C#, Photoshop.</p>
+            <li><strong>Weather App 🌦️</strong>
+                <p>A weather forecasting app that provides real-time weather data and predictions based on user location.</p>
+                <p><strong>Technologies used:</strong> JavaScript, HTML, CSS, OpenWeatherMap API.</p>
             </li>
         </ul>
-        
-        <p>Feel free to explore these projects and reach out if you have any questions or want to know more about my work! 😊</p>
     </section>
-    
-    <!-- Marquee at the bottom -->
-    <marquee class="css2" direction="right">You have reached the bottom 🫠</marquee>
 
-    <!-- Async Loading of JavaScript -->
-    <script src="scripts.js" async></script>
-    <script>
-        // JavaScript for sticky navigation (if additional functionality needed)
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-    </script>
+    <!-- Marquee at the bottom -->
+    <marquee class="css2"> Thanks for visiting my website! Have a great day! 😊</marquee>
 </body>
 </html>
