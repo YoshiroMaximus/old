@@ -11,138 +11,117 @@ body {
 header {
     background-color: #0B1215;
     color: #fff;
-    padding: 1em 0;
-    text-align: center;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    font-size: 2em;
-    margin: 0; /* Reset margin */
+header.sticky {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation styles */
+.logo {
+    width: 150px; /* Adjust logo size */
+    height: 150px; /* Adjust logo size */
+}
+
 nav ul {
     list-style: none;
+    display: flex;
+    gap: 1em;
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
 }
 
 nav ul li {
-    margin: 0 1em;
+    margin: 0;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
-}
-
-/* Social icons styles */
-.social-icons {
-    margin-left: auto; /* Push icons to the right */
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-left: 10px; /* Adjust spacing between social icons */
-}
-
-.social-icons a img {
-    width: 32px; /* Adjust icon size */
-    height: 32px; /* Adjust icon size */
-}
-
-/* Rainbow text effect */
-.rainbow-text {
-    background: linear-gradient(45deg, #f00, #ff0, #0f0, #00f, #f0f, #f00);
-    background-size: 400%;
-    color: transparent;
-    -webkit-background-clip: text; /* For older Safari/Chrome */
-    background-clip: text;
-    animation: rainbow 10s linear infinite;
-}
-
-@keyframes rainbow {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 400%;
-    }
-}
-
-/* Section styles (retain your existing section styles) */
-section {
-    padding: 2em;
-    margin: 2em auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    font-size: 1.8em;
-    color: #1a1a1a;
-    margin-top: 0;
-}
-
-h3 {
-    font-size: 1.4em;
-    color: #333;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 1.5em;
-    font-size: 1.1em;
-}
-
-ul {
-    padding-left: 1.2em;
-}
-
-ul li {
-    margin-bottom: 0.5em;
-    font-size: 1.1em;
-}
-
-a {
-    color: #1a73e8;
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments (retain your existing media queries) */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+/* CSS styles for rainbow text */
+.rainbow-text {
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2em; /* Adjust font size */
+    font-weight: bold;
+}
+
+/* Main content styles */
+section#about {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+section#about h2, section#about h3 {
+    color: #333;
+}
+
+section#about p, section#about ul {
+    line-height: 1.6;
+}
+
+section#about ul {
+    padding-left: 1em;
+}
+
+/* Marquee styles */
+marquee.css1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0B1215;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+marquee.css2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0B1215;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    h2 {
-        font-size: 1.5em;
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
     }
 
-    h3 {
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 1em;
+    .social-icons {
+        flex-direction: column;
+        gap: 0.5em;
     }
 }
