@@ -19,7 +19,7 @@ Welcome to my portfolio website! This site showcases my projects, skills, and co
 - Accent Color: #3b8beb
 
 ## 🚀 Projects
-Check out my recent work on the [Projects](https://YoshiroMaximus.github.io/projects.html) page. Each project includes a title, description, and relevant links.
+Check out my recent work on the [Projects](https://YoshiroMaximus.github.io/projects.html) page. Each project includes a title, description, and relevant links. 
 
 ## 📧 Contact
 Feel free to reach out to me through the [Contact](https://YoshiroMaximus.github.io/contact.html) page. You can find my email address there, and I'd love to hear from you!
